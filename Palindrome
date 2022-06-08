@@ -1,0 +1,25 @@
+import java.util.Scanner;
+class Palindrome
+{
+public static void main(String args[])
+{
+Scanner s=new Scanner(System.in);
+String str,s1="";
+str=s.nextLine();
+Palindrome p=new Palindrome();
+if(p.isPalindrome(str))
+System.out.print("Palindrome");
+else
+System.out.print("Not a Palindrome");
+}
+boolean isPalindrome(String s)
+{
+int i,j;
+for(i=0,j=s.length()-1;i<j;i++,j--)
+{
+if(s.charAt(i)!=s.charAt(j))
+return false;
+}
+return true;
+}
+}
